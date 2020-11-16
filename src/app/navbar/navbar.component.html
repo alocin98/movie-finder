@@ -1,0 +1,22 @@
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a *ngFor="let link of this.links" [routerLink]="link.route" (click)="closeNav()">{{link.label}}  <mat-icon>{{link.icon}}</mat-icon></a>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<div class="nav-bar-container">
+  <ul class="nav-bar-widescreen">
+    <li *ngFor="let l of this.links"><a [routerLink]="l.route" (click)="closeNav()">{{l.label}}  <mat-icon>{{l.icon}}</mat-icon></a></li>
+  </ul>
+  <button mat-icon-button (click)="openNav()" id="navButton">
+    <mat-icon>menu</mat-icon>
+  </button>
+</div>

@@ -14,7 +14,8 @@
 <!-- Use any element to open/show the overlay navigation menu -->
 <div class="nav-bar-container">
   <ul class="nav-bar-widescreen">
-    <li *ngFor="let l of this.links"><a [routerLink]="l.route" (click)="closeNav()">{{l.label}}  <mat-icon>{{l.icon}}</mat-icon></a></li>
+    <li *ngFor="let l of this.links">
+      <a [routerLink]="l.route" (click)="closeNav()"><mat-icon>{{l.icon}}</mat-icon><p>{{l.label}}</p></a></li>
   </ul>
   <button mat-icon-button (click)="openNav()" id="navButton">
     <mat-icon>menu</mat-icon>

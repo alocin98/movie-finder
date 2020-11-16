@@ -5,6 +5,7 @@ $bg: rgba(0, 0, 0, 0.3);
   width: 200px;
   text-align: center;
   cursor: pointer;
+  padding: .5em;
 }
 
 img,
@@ -31,6 +32,7 @@ img,
     background: $bg;
     color: #fff;
     opacity: 0;
+    border-radius: 1em;
     h2 {
       padding-top: 20%;
       font-family: 'Droid Serif', serif;
@@ -47,5 +49,31 @@ img,
       -webkit-filter: blur(3px);
       filter: blur(3px);
     }
+  }
+}
+
+@media only screen and (max-width: 1300px){
+  .bg,
+  .overlay {
+    width: 150px;
+    padding: .3em;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .bg,
+  .overlay {
+    width: 100px;
+    border-radius: .8em;
+    padding: .2em;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .bg,
+  .overlay {
+    width: 80px;
+    border-radius: .3em;
+    padding: .1em;
   }
 }

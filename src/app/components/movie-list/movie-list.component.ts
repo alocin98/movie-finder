@@ -22,8 +22,20 @@ export class MovieListComponent implements OnInit {
         map(movies => movies.results)
       );
     }
-    if (this.config.type === 'list'){}
-    if (this.config.type === 'discover'){}
+    if (this.config.type === 'list') {
+      this.movies$ = this.tmdb.lists.getDetails(this.config.id).pipe(
+        tap(console.log),
+        // @ts-ignore
+        map(movies => movies.items)
+      );
+    }
+
+    if (this.config.type === 'discover') {
+      this.movies$ = this.tmdb.discover.getMovies(this.config.props).pipe(
+        // @ts-ignore
+        map(movies => movies.results)
+      );
+    }
   }
 
 }

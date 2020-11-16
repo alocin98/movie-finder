@@ -1,8 +1,8 @@
-<div class="searchbar">
-  <div class="searchbar-input-holder">
-    <mat-form-field class="searchbar-input">
-      <input matInput [(ngModel)]="this.searchText" type="search" placeholder="Search any Movie!" class="search-input" />
-    </mat-form-field>
-    <button mat-button (click)="search()">Go</button>
+<div class="d-flex justify-content-center marg">
+  <div class="searchbar">
+    <form (ngSubmit)="search()">
+    <input [(ngModel)]="searchText" class="search_input" type="text" name="search" placeholder="Search...">
+    <a (click)="search()" class="search_icon"><mat-icon>search</mat-icon></a>
+    </form>
   </div>
 </div>

@@ -38,3 +38,16 @@
   height: 100px;
   z-index: -1;
 }
+
+@media only screen and (max-width: 1000px){
+  .movie-list-title{
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .movie-list-title{
+    font-size: 1em;
+  }
+}
+

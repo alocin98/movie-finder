@@ -1,1 +1,7 @@
-<p>search works!</p>
+<h1>search</h1>
+<app-search-input></app-search-input>
+<div>
+  <ul>
+    <li *ngFor="let movie of this.movies$ | async">{{movie.title}}</li>
+  </ul>
+</div>

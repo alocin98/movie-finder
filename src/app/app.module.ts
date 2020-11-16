@@ -20,6 +20,10 @@ import { MovieSmallComponent } from './components/movie-small/movie-small.compon
 import { StartComponent } from './pages/start/start.component';
 import { AboutComponent } from './pages/about/about.component';
 import {SearchComponent} from './pages/search/search.component';
+import { SearchInputComponent } from './components/search-input/search-input.component';
+import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 const appRoutes: Routes = [
   {path: '', component: StartComponent},
@@ -40,19 +44,24 @@ const appRoutes: Routes = [
     MovieIstComponent,
     MovieSmallComponent,
     StartComponent,
-    AboutComponent
+    AboutComponent,
+    SearchInputComponent,
+    SearchComponent
   ],
-    imports: [
-      BrowserModule,
-      RouterModule.forRoot(appRoutes),
-      NgTMDBApiModule.forRoot({ apiKey: 'a6b2c9accaaa7fb251ad47c6d6c59b5c' }),
-      BrowserAnimationsModule,
-      MatIconModule,
-      MatButtonModule,
-      MatChipsModule,
-      CommonModule,
-      MatListModule
-    ],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    NgTMDBApiModule.forRoot({apiKey: 'a6b2c9accaaa7fb251ad47c6d6c59b5c'}),
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatChipsModule,
+    CommonModule,
+    MatListModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

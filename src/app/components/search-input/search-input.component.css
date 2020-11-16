@@ -1,0 +1,22 @@
+.searchbar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar-input-holder{
+  width: 50%;
+  border-radius: 1em;
+  border: 1px solid black;
+  padding-left: 2em;
+  padding-right: 2em;
+  display: flex;
+}
+
+.searchbar-input{
+  width: 100%;
+}
+
+mat-icon{
+  font-size: 2em;
+}

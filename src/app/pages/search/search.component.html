@@ -1,7 +1,10 @@
-<h1>search</h1>
 <app-search-input></app-search-input>
 <div>
-  <ul>
-    <li *ngFor="let movie of this.movies$ | async">{{movie.title}}</li>
-  </ul>
+  <mat-list>
+    <mat-list-item class="search-list-item" *ngFor="let movie of this.movies$ | async">
+      <mat-divider></mat-divider>
+      <a [routerLink]="'/movie/' + movie.id">{{movie.title}}</a>
+      <div class="chip">{{movie.vote_average}}</div>
+    </mat-list-item>
+  </mat-list>
 </div>

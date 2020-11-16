@@ -1,0 +1,51 @@
+$bg: rgba(0, 0, 0, 0.3);
+
+.bg,
+.overlay {
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+img,
+.overlay {
+  transition: .3s all;
+  border-radius: 3px;
+}
+
+.bg {
+  float: left;
+  position: relative;
+  margin: .5%;
+  img {
+    width: 100%;
+    margin-bottom: -4px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: $bg;
+    color: #fff;
+    opacity: 0;
+    h2 {
+      padding-top: 20%;
+      font-family: 'Droid Serif', serif;
+    }
+    p {
+      font-family: 'Julius Sans One', sans-serif;
+    }
+  }
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+    img {
+      -webkit-filter: blur(3px);
+      filter: blur(3px);
+    }
+  }
+}

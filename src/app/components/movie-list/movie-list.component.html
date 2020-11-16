@@ -1,0 +1,14 @@
+<div>
+  <h2 class="movie-list-title">{{config.title}}</h2>
+  <div class="movie-list-over-container">
+  <div class="arrow-holder">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </div>
+  <div class="movie-list-container">
+    <app-movie-small *ngFor="let movie of movies$ | async" [movie]="movie"></app-movie-small>
+  </div>
+  <div class="arrow-holder">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </div>
+  </div>
+</div>

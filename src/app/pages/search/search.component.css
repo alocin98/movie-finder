@@ -1,0 +1,18 @@
+.search-list-item{
+  display: flex;
+  justify-content: space-between;
+}
+a{
+  text-decoration: none;
+  color: darkcyan;
+  min-width: 300px;
+}
+
+a:visited{
+  color: darkblue;
+}
+
+.chip{
+  float: right;
+  padding-left: 3em;
+}

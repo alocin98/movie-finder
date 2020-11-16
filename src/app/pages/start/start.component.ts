@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
 
+  movieListConfig = [{title: 'This Week\'s Trends', type: 'trending', timeWindow: 'week'}];
+
   constructor() { }
 
   ngOnInit(): void {

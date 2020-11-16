@@ -7,7 +7,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { MovieDetailComponent } from './page/movie-detail/movie-detail.component';
+import { MovieDetailComponent } from './pages/movie-detail/movie-detail.component';
 import { NgTMDBApiModule } from '@igorissen/ng-tmdb-api';
 import {CommonModule} from '@angular/common';
 import { TmdbImgComponent } from './components/tmdb-img/tmdb-img.component';
@@ -15,7 +15,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatListModule} from '@angular/material/list';
 import { TmdbVideoComponent } from './components/tmdb-video/tmdb-video.component';
 import { SafeResurlPipe } from './safe-resurl.pipe';
-import { MovieIstComponent } from './components/movie-ist/movie-ist.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieSmallComponent } from './components/movie-small/movie-small.component';
 import { StartComponent } from './pages/start/start.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -24,6 +24,7 @@ import { SearchInputComponent } from './components/search-input/search-input.com
 import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatDividerModule} from '@angular/material/divider';
 
 const appRoutes: Routes = [
   {path: '', component: StartComponent},
@@ -41,12 +42,13 @@ const appRoutes: Routes = [
     TmdbImgComponent,
     TmdbVideoComponent,
     SafeResurlPipe,
-    MovieIstComponent,
+    MovieListComponent,
     MovieSmallComponent,
     StartComponent,
     AboutComponent,
     SearchInputComponent,
-    SearchComponent
+    SearchComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,9 @@ const appRoutes: Routes = [
     MatListModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,2 +1,7 @@
-<h1>my Movie Finder</h1>
+<div class="start-container">
+<h1>Movie Finder</h1>
 <app-search-input></app-search-input>
+  <div class="movie-list-container">
+    <app-movie-list *ngFor="let conf of movieListConfig" [config]=conf></app-movie-list>
+  </div>
+</div>

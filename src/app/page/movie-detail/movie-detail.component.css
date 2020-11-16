@@ -1,0 +1,33 @@
+h1{
+  font-size: 4em;
+  line-height: 1em;
+  padding: 1em;
+}
+
+table, th, td {
+  padding: 6px;
+}
+td:last-child{
+  font-weight: lighter;
+}
+
+.title-and-image{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+}
+
+.title-and-image > *{
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  max-width: 600px;
+}
+
+.title{
+  max-width: 800px;
+}
+
+.title > *{
+  padding: .5em;
+}

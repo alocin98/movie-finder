@@ -1,0 +1,50 @@
+<div *ngIf="movie$ | async as movie">
+  <h1 id="title">{{movie.title}}</h1>
+  <div class="title-and-image">
+    <div class="image">
+      <app-tmdb-img [path]="movie.poster_path"></app-tmdb-img>
+    </div>
+    <div class="title">
+      <p>{{movie.overview}}</p>
+      <table>
+        <tr>
+          <td>Original language</td>
+          <td>{{movie.original_language}}</td>
+        </tr>
+        <tr>
+          <td>popularity</td>
+          <td>{{movie.popularity}}</td>
+        </tr>
+        <tr>
+          <td>Release date</td>
+          <td>{{movie.release_date}}</td>
+        </tr>
+        <tr>
+          <td>Runtime</td>
+          <td>{{movie.runtime}} minutes</td>
+        </tr>
+      </table>
+      <div>
+        <h2>Genres</h2>
+        <mat-chip-list>
+          <mat-chip *ngFor="let genre of movie.genres">{{genre.name}}</mat-chip>
+        </mat-chip-list>
+      </div>
+      <div>
+        <h2>Production Countries</h2>
+        <ul>
+          <li *ngFor="let country of movie.production_countries">{{country.name}}</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Spoken Languages</h2>
+        <ul>
+          <li *ngFor="let lang of movie.spoken_languages">{{lang.name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="videos">
+      <app-tmdb-video *ngFor="let video of movie.videos.results" [video]="video"></app-tmdb-video>
+    </div>
+  </div>
+</div>

@@ -9,9 +9,9 @@ export class NavbarComponent implements OnInit {
 
 
   public links = [
-    {route: '/', label: 'Start', icon: 'mail_outline'},
-    {route: '/blog', label: 'Blog', icon: 'history_edu'},
-    {route: '/about', label: 'Über mich', icon: 'face'}
+    {route: '/', label: 'Movie-Finder'},
+    {route: '/search', label: 'Search'},
+    {route: '/about', label: 'About'}
   ];
 
   constructor() { }

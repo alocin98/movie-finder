@@ -15,8 +15,16 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatListModule} from '@angular/material/list';
 import { TmdbVideoComponent } from './components/tmdb-video/tmdb-video.component';
 import { SafeResurlPipe } from './safe-resurl.pipe';
+import { MovieIstComponent } from './components/movie-ist/movie-ist.component';
+import { MovieSmallComponent } from './components/movie-small/movie-small.component';
+import { StartComponent } from './pages/start/start.component';
+import { AboutComponent } from './pages/about/about.component';
+import {SearchComponent} from './pages/search/search.component';
 
 const appRoutes: Routes = [
+  {path: '', component: StartComponent},
+  {path: 'search', component: SearchComponent},
+  {path: 'about', component: AboutComponent},
   {path: 'movie/:id', component: MovieDetailComponent}
 ];
 
@@ -28,7 +36,11 @@ const appRoutes: Routes = [
     MovieDetailComponent,
     TmdbImgComponent,
     TmdbVideoComponent,
-    SafeResurlPipe
+    SafeResurlPipe,
+    MovieIstComponent,
+    MovieSmallComponent,
+    StartComponent,
+    AboutComponent
   ],
     imports: [
       BrowserModule,

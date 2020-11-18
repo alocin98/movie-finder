@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {ActivatedRoute, ActivatedRouteSnapshot} from '@angular/router';
 import {map, switchMap, tap} from 'rxjs/operators';
 import {TMDBClient} from '@igorissen/ng-tmdb-api';
@@ -11,6 +11,7 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  @HostBinding('class') class = 'search-container';
 
   movies$: Observable<any>;
 

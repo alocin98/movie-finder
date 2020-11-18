@@ -4,6 +4,14 @@ h1{
   padding: 1em;
 }
 
+.movie-detail-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+
 table, th, td {
   padding: 6px;
 }
@@ -30,4 +38,16 @@ td:last-child{
 
 .title > *{
   padding: .5em;
+}
+
+@media screen and (max-width: 1000px){
+  h1{
+    padding: .5em;
+  }
+}
+
+@media screen and (max-width: 500px){
+  h1{
+    padding: .1em;
+  }
 }

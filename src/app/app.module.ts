@@ -25,12 +25,15 @@ import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDividerModule} from '@angular/material/divider';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const appRoutes: Routes = [
   {path: '', component: StartComponent},
   {path: 'search', component: SearchComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'movie/:id', component: MovieDetailComponent}
+  {path: 'movie/:id', component: MovieDetailComponent},
+  {path: '404', component: NotFoundComponent},
+  {path: '**', redirectTo: '404'}
 ];
 
 // @ts-ignore
@@ -48,7 +51,8 @@ const appRoutes: Routes = [
     AboutComponent,
     SearchInputComponent,
     SearchComponent,
-    MovieListComponent
+    MovieListComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
+import {BehaviorSubject, from, Observable} from 'rxjs';
 import {TMDBClient} from '@igorissen/ng-tmdb-api';
 import {map, tap} from 'rxjs/operators';
 
@@ -11,7 +11,7 @@ import {map, tap} from 'rxjs/operators';
 export class MovieListComponent implements OnInit {
 
   @Input() config: any;
-  movies$: Observable<any>;
+  @Input() movies$: Observable<any>;
 
   constructor(private tmdb: TMDBClient) { }
 
@@ -32,6 +32,13 @@ export class MovieListComponent implements OnInit {
 
     if (this.config.type === 'discover') {
       this.movies$ = this.tmdb.discover.getMovies(this.config.props).pipe(
+        // @ts-ignore
+        map(movies => movies.results)
+      );
+    }
+
+    if (this.config.type === 'similar') {
+      this.movies$ = this.tmdb.movies.getSimilar(this.config.id).pipe(
         // @ts-ignore
         map(movies => movies.results)
       );

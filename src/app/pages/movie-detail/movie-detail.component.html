@@ -43,8 +43,12 @@
         </ul>
       </div>
     </div>
-    <div class="videos">
-      <app-tmdb-video *ngFor="let video of movie.videos.results" [video]="video"></app-tmdb-video>
-    </div>
+  </div>
+  <div class="similar-movies">
+    <app-movie-list [movies$]="getSimilar(movie)" [config]="{title: 'Similar Movies'}"></app-movie-list>
+  </div>
+  <div class="videos">
+    <h2>Videos</h2>
+    <app-tmdb-video *ngFor="let video of movie.videos.results" [video]="video"></app-tmdb-video>
   </div>
 </div>

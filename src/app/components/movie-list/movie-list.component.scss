@@ -26,17 +26,7 @@
   margin: 1em;
   font-size: 2em;
   z-index: 3;
-  color: white;
-}
-
-.movie-list-title::after{
-  content: '';
-  background-color: black;
-  position: absolute;
-  left: -200px;
-  width: 500px;
-  height: 100px;
-  z-index: -1;
+  color: black;
 }
 
 @media only screen and (max-width: 1000px){

@@ -4,12 +4,17 @@ h1{
   padding: 1em;
 }
 
+.similar-movies{
+  width: 100%;
+}
+
 .movie-detail-container{
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
+  align-items: center;
 }
 
 table, th, td {
@@ -20,6 +25,8 @@ td:last-child{
 }
 
 .title-and-image{
+  width: 100%;
+  justify-content: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

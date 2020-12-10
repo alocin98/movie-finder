@@ -1,5 +1,6 @@
 <app-search-input></app-search-input>
 <div>
+  <p>needed {{this.measure / 1000}} seconds</p>
   <mat-list>
     <mat-list-item class="search-list-item" *ngFor="let movie of this.movies$ | async">
       <mat-divider></mat-divider>
